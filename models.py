@@ -20,7 +20,10 @@ class Cupcake(db.Model):
     rating = db.Column(db.Float, nullable = False)
     image = db.Column(db.Text, default = 'https://tinyurl.com/demo-cupcake')
     
-    def serialize_cupcake(self):
+
+
+
+def serialize(self):
         '''Serialize a cupcake SQLAlchemy obj to a dictionary'''
 
         return {
@@ -30,3 +33,5 @@ class Cupcake(db.Model):
             "rating": self.rating,
             "image" : self.image
         }
+    
+    
