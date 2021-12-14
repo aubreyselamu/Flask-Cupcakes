@@ -11,6 +11,10 @@ db.create_all()
 
 """Flask app for Cupcakes"""
 
+@app.route('/')
+def index_page():
+    return render_template('index.html')
+
 @app.route('/api/cupcakes')
 def get_all_cupcakes():
     '''Get a list of all cupcakes'''
